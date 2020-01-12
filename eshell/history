@@ -1,0 +1,10 @@
+node generate.js 
+node generate.js 
+node generate.js  > big.js
+node generate.js  > /Users/apple/Desktop/GitHub/Ferdon_Decoder_Java/chaincode/ferdonDecoder/src/test/java/io/ferdon/decoder/PetrinetJson/big.json
+node generate.js  > /Users/apple/Desktop/GitHub/Ferdon_Decoder_Java/chaincode/ferdonDecoder/src/test/java/io/ferdon/decoder/PetrinetJson/big.json
+node generate.js  > /Users/apple/Desktop/GitHub/Ferdon_Decoder_Java/chaincode/ferdonDecoder/src/test/java/io/ferdon/decoder/PetrinetJson/big.json
+node generate.js
+node generate.js  > /Users/apple/Desktop/GitHub/Ferdon_Decoder_Java/chaincode/ferdonDecoder/src/test/java/io/ferdon/decoder/PetrinetJson/big.json
+node generate.js  > /Users/apple/Desktop/GitHub/Ferdon_Decoder_Java/chaincode/ferdonDecoder/src/test/java/io/ferdon/decoder/PetrinetJson/big.json
+python test.py 
