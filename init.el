@@ -19,19 +19,13 @@ There are two things you can do about this warning:
 
 (add-to-list 'load-path "~/.emacs.d/config")
 
-(set-frame-font "Fira Code 11" nil t)
+(require 'interface)
+(require 'general-settings)
 
-
-(require 'interface.el)
-(load-theme 'tango t)
-
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x b") 'helm-mini)
-
-(global-company-mode +1)
 
 (add-to-list 'company-backends 'company-anaconda)
 (add-hook 'python-mode-hook 'anaconda-mode)
+
+
 (setq python-shell-interpreter "python3")
 
