@@ -17,39 +17,21 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
+(add-to-list 'load-path "~/.emacs.d/config")
+
 (set-frame-font "Fira Code 11" nil t)
 
-(load-theme 'adwaita t)
+
+(require 'interface.el)
+(load-theme 'tango t)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-mini)
-(global-linum-mode)
-(global-hl-line-mode)
-(tool-bar-mode -1)
-(doom-modeline-mode +1)
+
 (global-company-mode +1)
 
 (add-to-list 'company-backends 'company-anaconda)
 (add-hook 'python-mode-hook 'anaconda-mode)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(doom-modeline-mode t)
- '(fringe-mode (quote (nil . 0)) nil (fringe))
- '(package-selected-packages
-   (quote
-    (anaconda-mode restart-emacs smex doom-modeline doom-themes helm)))
- '(scroll-bar-mode nil)
- '(tool-bar-mode nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Fira Code" :foundry "nil" :slant normal :weight normal :height 110 :width normal)))))
-
+(setq python-shell-interpreter "python3")
 
