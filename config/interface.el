@@ -1,3 +1,5 @@
+;; (toggle-frame-fullscreen)
+
 (add-hook 'prog-mode-hook 'linum-mode)
 (global-hl-line-mode +1)
 
@@ -5,21 +7,31 @@
 
 (toggle-scroll-bar -1)
 (menu-bar-mode -1)
-(load-theme 'doom-dracula t)
+(load-theme 'blackboard t)
 
-(doom-modeline-mode +1)
+;; (doom-modeline-mode +1)
 (setq linum-format "%3d ")
 
 (fringe-mode '(4 . 0))
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Fira Code"
-                    :height 120
+                    :family "Source Code Pro"
+                    :height 115
                     :weight 'normal
                     :width 'normal)
 (require 'neotree)
 (global-set-key (kbd "M-s f") 'neotree-toggle)
 
+
+(require 'diminish)
+
+(diminish 'projectile-mode)
+(diminish 'ivy-mode)
+(diminish 'which-key-mode)
+(diminish 'counsel-projectile-mode)
+(diminish 'visual-line-mode)
+
+(powerline-default-theme)
 ;; (set-face-attribute 'hl-line nil :inherit t :background "sky blue")
 
 ;;Neotree 

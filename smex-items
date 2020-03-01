@@ -1,16 +1,87 @@
 
 ;; ----- smex-history -----
 (
- cd
- 5x5
- arp
- dbx
- dig
- erc
- ert
+ lsp-restart-workspace
+ lsp-install-server
+ company-lsp
+ lsp-toggle-symbol-highlight
+ lsp-mode
+ lsp
+ eshell
 )
 
 ;; ----- smex-data -----
 (
- 
+ (toggle-frame-fullscreen . 27)
+ (package-install . 44)
+ (restart-emacs . 23)
+ (counsel-load-theme . 106)
+ (doom-modeline-mode . 10)
+ (powerline-default-theme . 8)
+ (load-file . 55)
+ (company-complete . 3)
+ (hl-line-mode . 4)
+ (lsp-ivy-workspace-symbol . 2)
+ (projectile-add-known-project . 5)
+ (projectile-find-file . 4)
+ (projectile-ag . 3)
+ (projectile-grep . 1)
+ (projectile-ibuffer . 1)
+ (eshell . 19)
+ (projectile-commander . 1)
+ (lsp . 13)
+ (counsel-projectile-mode . 5)
+ (linum-mode . 3)
+ (markdown-preview . 2)
+ (projectile-mode . 3)
+ (lsp-toggle-symbol-highlight . 6)
+ (counsel-projectile-switch-to-buffer . 1)
+ (neotree . 1)
+ (lsp-find-definition . 9)
+ (lsp-goto-implementation . 2)
+ (package-list-packages . 5)
+ (magit . 10)
+ (version . 1)
+ (company-lsp . 6)
+ (browse-url . 5)
+ (magit-init . 1)
+ (magit-log . 5)
+ (magit-status . 1)
+ (company-mode . 2)
+ (powerline-vim-theme . 1)
+ (powerline-center-theme . 1)
+ (visual-line-mode . 1)
+ (lsp-ui-mode . 5)
+ (lsp-switch-to-io-log-buffer . 2)
+ (magit-tbdiff . 1)
+ (diminish . 6)
+ (conf-mode . 2)
+ (java-mode . 1)
+ (javascript-mode . 1)
+ (lsp-mode . 15)
+ (lsp-disconnect . 1)
+ (lsp-restart-workspace . 10)
+ (lsp-install-server . 10)
+ (lsp-workspace-restart . 1)
+ (lsp-rename . 2)
+ (powerline-reset . 1)
+ (lsp-treemacs-call-hierarchy . 1)
+ (lsp-treemacs-symbols . 1)
+ (mode-line-widen . 1)
+ (lsp-treemacs-sync-mode . 2)
+ (lsp-treemacs-references . 1)
+ (mark-beginning-of-buffer . 1)
+ (mark-page . 1)
+ (goto-address . 1)
+ (find-file . 2)
+ (find-file-at-point . 1)
+ (menu-set-font . 1)
+ (helm-M-x . 1)
+ (doc-view-mode . 1)
+ (pdf-view-mode . 1)
+ (pdf-tools-install . 1)
+ (full-calc . 1)
+ (yas-minor-mode . 1)
+ (git-rebase-mode . 1)
+ (js-mode . 1)
 )

@@ -10,3 +10,75 @@ node generate.js  > /Users/apple/Desktop/GitHub/Ferdon_Decoder_Java/chaincode/fe
 python test.py 
 ls
 node test.js
+node test.js 
+printf 
+ls
+ls -r 5
+ls
+python 
+ls
+docker 
+docker ps
+ls
+ls
+ls
+ls
+ls
+cd 
+cd Documents/
+ls
+mkdir helloPy 
+cd helloPy/
+git init 
+nodemon ./server/server.js
+cd ..
+cd ..
+nodemon server.js
+cd ..
+ls
+nodemon server/server.js 
+ls
+cd ..
+cd ..
+cd ..
+ls
+nodemon ./server/server.js 
+ls
+cd Desktop/
+ls
+cd GitHub/
+ls
+mkdir magit-demo 
+cd magit-demo/
+ls
+python hello.py 
+python hello.py 
+cd Desktop/GitHub/
+ls
+git clone 
+git clone https://github.com/vuvth/magit-example
+cd 
+cd Desktop/docker-services/
+ls
+docker-compose up
+docker-compose 
+docker-compose up 
+cd ..
+cd ..
+cd ..
+cd ..
+cd ~/Desktop/
+ls 
+cd docker-services/
+docker-compose up
+cd ~/Desktop/docker-services/
+docker-compose 
+docker-compose up
+ls 
+cd 
+cd ~/.emacs.d/
+ls 
+ls -a
+rm -rf .cache/
+ls 
+node test.js 
