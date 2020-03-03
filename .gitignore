@@ -1,3 +1,13 @@
 *.*~
 .cache
+recentf
 .lsp-session-v1
+ede-projects.el
+eshell
+projectile*
+elpa
+snippets
+transient
+anaconda-mode
+smex-items
+auto-save-list

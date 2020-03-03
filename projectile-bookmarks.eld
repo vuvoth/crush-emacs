@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/Desktop/GitHub/P2PChatApp/" "~/Desktop/GitHub/Ferdon_Decoder/" "~/Desktop/GitHub/Andiku/" "~/Desktop/GitHub/Laplacian/" "~/Desktop/GitHub/TimGapInfrustructure/" "~/Desktop/GitHub/magit-example/" "~/Desktop/GitHub/homnayangi/" "~/Desktop/GitHub/EthereumMerkleContract/" "~/Documents/helloPy/")
+nil

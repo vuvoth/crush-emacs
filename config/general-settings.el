@@ -1,10 +1,6 @@
 
 ;; Config navigative for emacs
 
-;; (require 'ls-lisp)
-
-(global-diff-hl-mode)
-
 
 (when (eq system-type 'darwin)
   (require 'ls-lisp)
@@ -23,7 +19,8 @@
 
 (use-package smex
   :ensure t)
-
+(use-package counsel
+  :ensure t)
 (global-set-key (kbd "M-s s") 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
@@ -40,10 +37,6 @@
 (global-set-key (kbd "C-x l") 'counsel-locate)
 
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
-
-(global-company-mode +1)
-(setq company-idle-delay 0.1)
-
 
 
 (global-visual-line-mode t)

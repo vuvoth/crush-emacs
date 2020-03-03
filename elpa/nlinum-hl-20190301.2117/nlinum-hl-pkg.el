@@ -1,2 +1,0 @@
-;;; -*- no-byte-compile: t -*-
-(define-package "nlinum-hl" "20190301.2117" "heal nlinum's line numbers" '((emacs "24.4") (nlinum "1.7") (cl-lib "0.5")) :commit "dc6b365a58e06c7d637a76a31c71a40b20da8b56" :keywords '("nlinum" "highlight" "current" "line" "faces") :authors '(("Henrik Lissner <http://github/hlissner>")) :maintainer '("Henrik Lissner" . "henrik@lissner.net") :url "https://github.com/hlissner/emacs-nlinum-hl")
