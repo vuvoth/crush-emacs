@@ -18,6 +18,8 @@
 (menu-bar-mode -1)
 (load-theme 'manoj-dark t)
 
+(set-face-attribute 'hl-line nil :foreground nil :background "gray13")
+
 (setq linum-format "%3d ")
 
 (fringe-mode '(8 . 0))
