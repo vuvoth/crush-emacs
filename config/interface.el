@@ -12,6 +12,7 @@
 
 (use-package treemacs
   :ensure t)
+
 ;; why not Gia Binh ? i dont know. :'(
 
 
@@ -26,7 +27,7 @@
     (treemacs-create-icon :icon "- " :extensions (tag-open))
     (treemacs-create-icon :icon "+ " :extensions (tag-closed))
     (treemacs-create-icon :icon "b " :extensions (boolean-data) :fallback "-")
-    (treemacs-create-icon :icon "Class.png" :extensions (class) :fallback "-")
+    (treemacs-create-icon :icon " " :extensions (class) :fallback "-")
     (treemacs-create-icon :icon "ColorPalette.png" :extensions (color-palette) :fallback "-")
     (treemacs-create-icon :icon " " :extensions (constant) :fallback "-")
     (treemacs-create-icon :icon "Document.png" :extensions (document) :fallback "-")
@@ -37,12 +38,12 @@
     (treemacs-create-icon :icon "Indexer.png" :extensions (indexer) :fallback "-")
     (treemacs-create-icon :icon "IntelliSenseKeyword.png" :extensions (intellisense-keyword) :fallback "-")
     (treemacs-create-icon :icon "Interface.png" :extensions (interface) :fallback "-")
-    (treemacs-create-icon :icon "LocalVariable.png" :extensions (localvariable) :fallback "-")
+    (treemacs-create-icon :icon " " :extensions (localvariable) :fallback "-")
     (treemacs-create-icon :icon " " :extensions (method) :fallback "-")
     (treemacs-create-icon :icon "Namespace.png" :extensions (namespace) :fallback "-")
     (treemacs-create-icon :icon "Numeric.png" :extensions (numeric) :fallback "-")
     (treemacs-create-icon :icon "Operator.png" :extensions (operator) :fallback "-")
-    (treemacs-create-icon :icon "Property.png" :extensions (property) :fallback "-")
+    (treemacs-create-icon :icon " " :extensions (property) :fallback "-")
     (treemacs-create-icon :icon "Snippet.png" :extensions (snippet) :fallback "-")
     (treemacs-create-icon :icon "String.png" :extensions (string) :fallback "-")
     (treemacs-create-icon :icon "Structure.png" :extensions (structure) :fallback "-")
@@ -54,7 +55,7 @@
     (treemacs-create-icon :icon "default_folder.png" :extensions (default-folder) :fallback "-")
     (treemacs-create-icon :icon "default_root_folder_opened.png" :extensions (default-root-folder-opened) :fallback "-")
     (treemacs-create-icon :icon "default_root_folder.png" :extensions (default-root-folder) :fallback "-")
-    (treemacs-create-icon :icon "file_type_class.png" :extensions ("class") :fallback "-")
+    (treemacs-create-icon :icon " " :extensions ("class") :fallback "-")
     (treemacs-create-icon :icon "file_type_jar.png" :extensions (file-type-jar) :fallback "-")
     (treemacs-create-icon :icon "folder-open.png" :extensions (folder-open) :fallback "-")
     (treemacs-create-icon :icon "folder.png" :extensions (folder) :fallback "-")
@@ -100,17 +101,17 @@
 (tool-bar-mode -1)
 
 (toggle-scroll-bar -1)
-(menu-bar-mode -1)
+
 (load-theme 'manoj-dark t)
 
-(set-face-attribute 'hl-line nil :foreground nil :background "gray13")
+(set-face-attribute 'hl-line nil :foreground nil :background "gray15")
 
 (setq linum-format "%3d ")
 
-(fringe-mode '(8 . 0))
+(fringe-mode '(6 . 0))
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Menlo"
+                    :family "Source Code Pro"
                     :height 120
                     :weight 'normal
                     :width 'normal)
