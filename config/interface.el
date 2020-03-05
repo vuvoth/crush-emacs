@@ -10,18 +10,26 @@
   :ensure t)
 
 
+;; (use-package linum-relative
+;;   :ensure t
+;;   :config
+;;   (linum-on)
+;;   (setq linum-relative-backend 'display-line-numbers-mode)
+;;   )
+
 (use-package treemacs
   :ensure t)
 
 ;; why not Gia Binh ? i dont know. :'(
 
 
+
 (treemacs-create-theme "Kei"
   :config
   (progn
-    (treemacs-create-icon :icon " " :extensions (root))
-    (treemacs-create-icon :icon " " :extensions (dir-closed))
-    (treemacs-create-icon :icon " " :extensions (dir-open))
+    (treemacs-create-icon :icon (all-the-icons-material "folder") :extensions (root))
+    (treemacs-create-icon :icon (all-the-icons-material "arrow_forward") :extensions (dir-closed))
+    (treemacs-create-icon :icon (all-the-icons-material "arrow_downward" ) :extensions (dir-open))
     (treemacs-create-icon :icon " " :extensions ("yaml" "yml" "c" "c++" "java" "json" "js" "ts" "go" "py" fallback))
     (treemacs-create-icon :icon "* " :extensions (tag-leaf))
     (treemacs-create-icon :icon "- " :extensions (tag-open))
@@ -102,7 +110,7 @@
 
 (toggle-scroll-bar -1)
 
-(load-theme 'manoj-dark t)
+(load-theme 'solarized-dark t)
 
 (set-face-attribute 'hl-line nil :foreground nil :background "gray15")
 
@@ -147,5 +155,14 @@
 (setq initial-major-mode 'org-mode)
 (setq org-hide-emphasis-markers t)
 
+(setq-default cursor-type 'box)
+(blink-cursor-mode +1)
 
+(setq scroll-conservatively most-positive-fixnum)
 (provide 'interface)
+
+
+
+
+
+

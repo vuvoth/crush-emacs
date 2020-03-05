@@ -26,14 +26,13 @@
 (require 'programming-config)
 (require 'git-configure)
 (require 'utils)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(google-this magit seti-theme zen-and-art-theme dockerfile-mode yaml-mode treemacs-projectile which-key use-package smex restart-emacs prettier-js lsp-ui lsp-treemacs lsp-ivy exec-path-from-shell diff-hl counsel-projectile company-lsp all-the-icons)))
+   '(linum-relative zenburn-theme zen-and-art-theme yaml-mode xresources-theme which-key use-package ubuntu-theme treemacs-projectile tango-2-theme spaceline solarized-theme smex seti-theme restart-emacs prettier-js neotree minimap magit lsp-ui lsp-treemacs lsp-ivy helm google-this exec-path-from-shell doom-modeline dockerfile-mode diff-hl counsel-projectile company-lsp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -96,4 +96,10 @@
 (setq mac-command-modifier 'meta)
 (setq mac-right-option-modifier 'control)
 
+
+(setq scroll-preserve-screen-position 1)
+;;scroll window up/down by one line
+(global-set-key (kbd "M-n") (kbd "C-u 1 C-v"))
+(global-set-key (kbd "M-p") (kbd "C-u 1 M-v"))
+
 (provide 'navigative)
