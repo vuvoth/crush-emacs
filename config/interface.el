@@ -10,13 +10,6 @@
   :ensure t)
 
 
-;; (use-package linum-relative
-;;   :ensure t
-;;   :config
-;;   (linum-on)
-;;   (setq linum-relative-backend 'display-line-numbers-mode)
-;;   )
-
 (use-package treemacs
   :ensure t)
 
@@ -110,12 +103,15 @@
 
 (toggle-scroll-bar -1)
 
-(load-theme 'manoj-dark t)
+(use-package color-theme-sanityinc-tomorrow
+  :ensure t
+  :config
+  (load-theme 'sanityinc-tomorrow-night t))
+
 
 (set-face-attribute 'hl-line nil :foreground nil :background "gray15")
 
 (setq linum-format "%3d ")
-
 (fringe-mode '(6 . 0))
 ;; Set default font
 (set-face-attribute 'default nil

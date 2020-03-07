@@ -32,7 +32,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(json-mode zenburn-theme zen-and-art-theme yasnippet yaml-mode xresources-theme which-key use-package ubuntu-theme treemacs-projectile telephone-line tango-2-theme spaceline-all-the-icons solarized-theme smex smeargle slime-theme seti-theme restart-emacs prettier-js planet-theme neotree minimap magit lsp-ui lsp-treemacs lsp-ivy linum-relative helm google-this exec-path-from-shell doom-modeline dockerfile-mode diff-hl counsel-projectile company-lsp)))
+   '(color-theme-sanityinc-tomorrow json-mode yasnippet yaml-mode xresources-theme which-key use-package ubuntu-theme treemacs-projectile telephone-line tango-2-theme solarized-theme smex smeargle slime-theme seti-theme restart-emacs prettier-js planet-theme neotree magit lsp-ui lsp-treemacs lsp-ivy linum-relative helm google-this exec-path-from-shell doom-modeline dockerfile-mode diff-hl counsel-projectile company-lsp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
