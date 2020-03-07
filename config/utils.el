@@ -15,6 +15,9 @@
 	   
            )))
 
+(defun kei/open-youtube ()
+  (interactive)
+  (browse-url "https://www.youtube.com"))
 
 (defun kei/open-local-server (port)
   "Open localhost server with `port`"

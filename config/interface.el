@@ -110,7 +110,7 @@
 
 (toggle-scroll-bar -1)
 
-(load-theme 'solarized-dark t)
+(load-theme 'manoj-dark t)
 
 (set-face-attribute 'hl-line nil :foreground nil :background "gray15")
 
@@ -128,6 +128,16 @@
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 
+(use-package telephone-line
+  :ensure t
+  :config
+  (setq telephone-line-primary-left-separator 'telephone-line-gradient
+	telephone-line-secondary-left-separator 'telephone-line-nil
+	telephone-line-primary-right-separator 'telephone-line-gradient
+	telephone-line-secondary-right-separator 'telephone-line-nil)
+  (setq telephone-line-height 10
+	telephone-line-evil-use-short-tag t)
+  (telephone-line-mode 1))
 ;; Display startup message
 (setq initial-scratch-message
 "
@@ -159,6 +169,8 @@
 (blink-cursor-mode +1)
 
 (setq scroll-conservatively most-positive-fixnum)
+
+
 (provide 'interface)
 
 

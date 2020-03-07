@@ -42,6 +42,11 @@
   (lsp-treemacs-sync-mode 1)  
   :commands lsp-treemacs-errors-list)
 
+(use-package yasnippet
+  :ensure t
+  :config
+  (yas-reload-all)
+  (add-hook 'prog-mode-hook #'yas-minor-mode))
 ;; optional if you want which-key integration
 (use-package which-key
   :ensure t
