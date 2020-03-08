@@ -27,4 +27,6 @@
    ))
 
 
+(use-package command-log-mode
+  :ensure t)
 (provide 'utils)

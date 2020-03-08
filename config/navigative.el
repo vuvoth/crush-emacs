@@ -1,6 +1,10 @@
 ;; emacs navigative
 ;; author vuvth
 
+(use-package goto-line-preview
+  :ensure t
+  :config
+  (global-set-key [remap goto-line] 'goto-line-preview))
 (setq mac-option-modifier 'super)
 
 (use-package projectile

@@ -109,10 +109,10 @@
   (load-theme 'sanityinc-tomorrow-night t))
 
 
-(set-face-attribute 'hl-line nil :foreground nil :background "gray15")
+;; (set-face-attribute 'hl-line nil :foreground nil :background "gray15")
 
 (setq linum-format "%3d ")
-(fringe-mode '(6 . 0))
+(fringe-mode '(0 . 4))
 ;; Set default font
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
@@ -135,31 +135,28 @@
 	telephone-line-evil-use-short-tag t)
   (telephone-line-mode 1))
 ;; Display startup message
-(setq initial-scratch-message
+(setq initial-scratch-Message
 "
-*I give up everything or I will have nothing*
+I give up everything or I will have nothing
   
-   /You, you, you're the one who comes and breaks the rule/
-   /breaks the rule/
-   /I, I, I have always been acting a fool/
-   /and I know it's not cool/
-   /choose ego over u/
-   /even I know the truth/
-   /I love you/
+   You, you, you're the one who comes and breaks the rule
+   breaks the rule
+   I, I, I have always been acting a fool
+   and I know it's not cool
+   choose ego over u
+   even I know the truth
+   I love you
 
-   /Don't care, don't hear/
-   /what they say, they do/ 
-   /to your life, your story./
+   Don't care, don't hear
+   what they say, they do 
+   to your life, your story.
 
-   *You might not... be the first, or the last, but the best...*
+   You might not... be the first, or the last, but the best...
 
-                                                         Infinity
+                                                         Han Han
 ")
 
 (setq inhibit-startup-message t)
-
-(setq initial-major-mode 'org-mode)
-(setq org-hide-emphasis-markers t)
 
 (setq-default cursor-type 'box)
 (blink-cursor-mode +1)
@@ -168,9 +165,3 @@
 
 
 (provide 'interface)
-
-
-
-
-
-

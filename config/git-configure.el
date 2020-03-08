@@ -4,9 +4,13 @@
 (use-package magit
   :ensure t)
 
-(global-diff-hl-mode +1)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+(add-hook 'after-init-hook 'global-diff-hl-mode)
+
 (diff-hl-flydiff-mode +1)
 
+(diff-hl-margin-mode +1)
+(setq diff-hl-side 'right)
 
 (provide 'git-configure)
 
