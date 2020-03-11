@@ -5,7 +5,7 @@
   :config
   (setq
    company-minimum-prefix-length 2
-   company-idle-delay 0.1))
+   company-idle-delay 0.2))
 
 (use-package lsp-mode
   :ensure t
@@ -16,13 +16,15 @@
 	 (javascript-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp)
+  :commands lsp
+  :config
+  (setq lsp-ui-doc-enable nil))
 
 
 ;; optionally
-(use-package lsp-ui
-  :ensure t
-  :commands lsp-ui-mode)
+;; (use-package lsp-ui
+;;   :ensure t
+;;   :commands lsp-ui-mode)
 ;; lsp company backend
 (use-package company-lsp
   :ensure t

@@ -115,7 +115,7 @@
 (fringe-mode '(0 . 4))
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Source Code Pro"
+                    :family "Envy Code R"
                     :height 120
                     :weight 'normal
                     :width 'normal)
@@ -131,11 +131,11 @@
 	telephone-line-secondary-left-separator 'telephone-line-nil
 	telephone-line-primary-right-separator 'telephone-line-gradient
 	telephone-line-secondary-right-separator 'telephone-line-nil)
-  (setq telephone-line-height 10
+  (setq telephone-line-height 15
 	telephone-line-evil-use-short-tag t)
   (telephone-line-mode 1))
 ;; Display startup message
-(setq initial-scratch-Message
+(setq initial-scratch-message
 "
 I give up everything or I will have nothing
   
@@ -162,6 +162,7 @@ I give up everything or I will have nothing
 (blink-cursor-mode +1)
 
 (setq scroll-conservatively most-positive-fixnum)
+
 
 
 (provide 'interface)
