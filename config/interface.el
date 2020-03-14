@@ -96,7 +96,7 @@
 (setq treemacs-space-between-root-nodes nil)
 (setq treemacs--icon-size 12)
 
-(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (global-hl-line-mode +1)
 
 (tool-bar-mode -1)
@@ -112,11 +112,13 @@
 ;; (set-face-attribute 'hl-line nil :foreground nil :background "gray15")
 
 (setq linum-format "%3d ")
-(fringe-mode '(0 . 4))
+(fringe-mode '(2 . 4))
+
+
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Envy Code R"
-                    :height 120
+                    :family "Monaco"
+                    :height 110
                     :weight 'normal
                     :width 'normal)
 
