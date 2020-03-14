@@ -103,10 +103,11 @@
 
 (toggle-scroll-bar -1)
 
-(use-package color-theme-sanityinc-tomorrow
-  :ensure t
-  :config
-  (load-theme 'sanityinc-tomorrow-night t))
+
+;; (use-package color-theme-sanityinc-tomorrow
+;;   :ensure t
+;;   :config
+;;   (load-theme 'sanityinc-tomorrow-night t))
 
 
 ;; (set-face-attribute 'hl-line nil :foreground nil :background "gray15")
@@ -117,7 +118,7 @@
 
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Monaco"
+                    :family "Menlo"
                     :height 110
                     :weight 'normal
                     :width 'normal)
