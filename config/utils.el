@@ -29,7 +29,7 @@
 (use-package command-log-mode
   :ensure t)
 
-(global-set-key (kbd "M-o r") 'restart-emacs)
+(global-set-key (kbd "M-s r") 'restart-emacs)
 
 (defun kei/open-git-root()
   (interactive)
