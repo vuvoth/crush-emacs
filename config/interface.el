@@ -1,10 +1,9 @@
+
 (use-package prettier-js
   :ensure t)
 (require 'prettier-js)
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 
-
-;; (toggle-frame-fullscreen)
 
 (use-package all-the-icons
   :ensure t)
@@ -93,33 +92,34 @@
 
 (treemacs-filewatch-mode +1)
 
+
 (setq treemacs-space-between-root-nodes nil)
 (setq treemacs--icon-size 12)
 
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (global-hl-line-mode +1)
 
+
 (tool-bar-mode -1)
 
 (toggle-scroll-bar -1)
 
 
-;; (use-package color-theme-sanityinc-tomorrow
-;;   :ensure t
-;;   :config
-;;   (load-theme 'sanityinc-tomorrow-night t))
+(use-package moe-theme
+  :ensure t
+  :config
+  (load-theme 'moe-light t))
 
 
 ;; (set-face-attribute 'hl-line nil :foreground nil :background "gray15")
 
-(setq linum-format "%3d ")
-(fringe-mode '(2 . 4))
+(fringe-mode '(0 . 4))
 
 
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Menlo"
-                    :height 110
+                    :family "Andale Mono"
+                    :height 120
                     :weight 'normal
                     :width 'normal)
 

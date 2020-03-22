@@ -4,6 +4,7 @@
 	 (emacs-lisp-mode . company-mode))
   :config
   (setq
+   company-tooltip-maximum-width 100
    company-minimum-prefix-length 2
    company-idle-delay 0.2))
 

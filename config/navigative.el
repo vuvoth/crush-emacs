@@ -1,6 +1,14 @@
 ;; emacs navigative
 ;; author vuvth
 
+(use-package ace-window
+  :ensure t
+  :config
+  (ace-window-display-mode)
+  :bind
+  ("M-o" . ace-window))
+
+
 (use-package goto-line-preview
   :ensure t
   :config
