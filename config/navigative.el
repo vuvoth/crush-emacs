@@ -34,18 +34,18 @@
   :ensure t)
 (projectile-mode +1)
 
-(use-package counsel-projectile
-  :ensure t)
-(counsel-projectile-mode +1)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 (use-package treemacs-projectile
-  :ensure t)
+  :ensure t
+  :bind
+  ("C-c p h" . helm-projectile))
 
 (use-package restart-emacs
   :ensure t)
 
 
+(use-package helm-projectile
+  :ensure t)
 ;; ;; Config navigative for emacs
 
 ;; (use-package ivy
@@ -118,6 +118,10 @@
   ("M-x" . helm-M-x)
   ("C-x b" . helm-mini))
 
+(use-package helm-swoop
+  :ensure t
+  :bind
+  ("M-s s" . helm-swoop))
   (global-visual-line-mode t)
 
 ;disable backup

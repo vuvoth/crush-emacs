@@ -12,17 +12,19 @@
 ;; Its a bad man's world
 ;; =================================
 
+
 (use-package anzu
   ;; show number text match with search test
   :ensure t
   :config
-  (anzu-mode))
+  (global-anzu-mode +1))
 
 (use-package prettier-js
   :ensure t)
-(require 'prettier-js)
-(add-hook 'js2-mode-hook 'prettier-js-mode)
 
+(require 'prettier-js)
+
+(add-hook 'js2-mode-hook 'prettier-js-mode)
 
 (use-package all-the-icons
   :ensure t)
@@ -32,9 +34,8 @@
   :ensure t)
 
 
-
-
-(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+;; (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+;; (add-hook 'markdown-mode-hook 'display-line-numbers-mode)
 (global-hl-line-mode +1)
 
 
@@ -46,12 +47,13 @@
 (use-package moe-theme
   :ensure t
   :config
+  (setq moe-theme-highlight-buffer-id nil)
   (load-theme 'moe-light t))
 
 
 ;; (set-face-attribute 'hl-line nil :foreground nil :background "gray15")
 
-(fringe-mode '(0 . 4))
+(fringe-mode '(8 . 0))
 
 
 ;; Set default font
@@ -61,20 +63,12 @@
                     :weight 'normal
                     :width 'normal)
 
-;;Neotree 
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-
-
 (use-package telephone-line
   :ensure t
   :config
-  (setq telephone-line-primary-left-separator 'telephone-line-gradient
-	telephone-line-secondary-left-separator 'telephone-line-nil
-	telephone-line-primary-right-separator 'telephone-line-gradient
-	telephone-line-secondary-right-separator 'telephone-line-nil)
-  (setq telephone-line-height 15
-	telephone-line-evil-use-short-tag t)
   (telephone-line-mode 1))
+
+
 ;; Display startup message
 (setq initial-scratch-message
 "
