@@ -35,17 +35,14 @@
 (projectile-mode +1)
 
 
-(use-package treemacs-projectile
-  :ensure t
-  :bind
-  ("C-c p h" . helm-projectile))
 
 (use-package restart-emacs
   :ensure t)
 
 
 (use-package helm-projectile
-  :ensure t)
+  :ensure t
+    :bind ("C-c p h" . helm-projectile))
 ;; ;; Config navigative for emacs
 
 ;; (use-package ivy

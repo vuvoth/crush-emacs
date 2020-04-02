@@ -4,7 +4,6 @@
 ;; next time i will add more comment and make clear and clean funcional
 ;;
 ;; why not Gia Binh ? i dont know. :'(
-;; thủ vai ác nhé (-.-) 
 ;; =================================
 ;; Its a bad man's world
 ;; Its a bad man's world
@@ -14,7 +13,7 @@
 
 
 (use-package anzu
-  ;; show number text match with search test
+  ;;; show number text match with search test
   :ensure t
   :config
   (global-anzu-mode +1))
@@ -22,36 +21,33 @@
 (use-package prettier-js
   :ensure t)
 
-(require 'prettier-js)
-
-(add-hook 'js2-mode-hook 'prettier-js-mode)
-
-(use-package all-the-icons
-  :ensure t)
+(use-package prettier-js
+  :ensure t
+  :hook
+  (js2-mode . prettier-js-mode))
 
 
-(use-package treemacs
-  :ensure t)
-
-
-;; (add-hook 'prog-mode-hook 'display-line-numbers-mode)
-;; (add-hook 'markdown-mode-hook 'display-line-numbers-mode)
 (global-hl-line-mode +1)
-
 
 (tool-bar-mode -1)
 
 (toggle-scroll-bar -1)
 
 
-(use-package moe-theme
+
+
+;; (use-package moe-theme
+;;   :ensure t
+;;   :config
+;;   (setq moe-theme-highlight-buffer-id nil)
+;;   (load-theme 'moe-light t))
+
+
+(use-package twilight-theme
   :ensure t
   :config
-  (setq moe-theme-highlight-buffer-id nil)
-  (load-theme 'moe-light t))
+  (load-theme 'twilight t))
 
-
-;; (set-face-attribute 'hl-line nil :foreground nil :background "gray15")
 
 (fringe-mode '(8 . 0))
 
@@ -101,3 +97,4 @@ I give up everything or I will have nothing
 
 
 (provide 'interface)
+

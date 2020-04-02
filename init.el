@@ -18,7 +18,6 @@
 (use-package exec-path-from-shell
   :ensure t
   :config
-  (setq exec-path-from-shell-check-startup-files nil)
   (exec-path-from-shell-initialize))
 
 (add-to-list 'load-path "~/.emacs.d/config")
@@ -32,3 +31,6 @@
 (require 'eshell-config)
 (require 'markdown-config)
 (require 'tramp-config)
+(require 'emacs-meme)
+
+;;; init.el ends here

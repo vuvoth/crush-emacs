@@ -15,6 +15,7 @@
 (setq org-plantuml-jar-path (expand-file-name "/Users/apple/.emacs.d/tools/plantuml.jar"))
 (setq plantuml-default-exec-mode 'jar)
 (setq plantuml-jar-path "/Users/apple/.emacs.d/tools/plantuml.jar")
+
 (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
 
 (with-eval-after-load 'org
@@ -40,3 +41,4 @@
      (plantuml . t))))
 
 (provide 'org-config)
+;;; org-config.el ends here
