@@ -24,13 +24,14 @@
 
 (require 'interface)
 (require 'navigative)
+(require 'helm-config)
 (require 'programming-config)
 (require 'git-configure)
 (require 'org-config)
 (require 'utils)
-(require 'eshell-config)
+(require 'shell-config)
 (require 'markdown-config)
 (require 'tramp-config)
 (require 'emacs-meme)
 
-;;; init.el ends here
+(provide 'init)

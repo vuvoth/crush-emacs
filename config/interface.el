@@ -65,6 +65,7 @@
   (telephone-line-mode 1))
 
 
+
 ;; Display startup message
 (setq initial-scratch-message
 "
@@ -93,8 +94,6 @@ I give up everything or I will have nothing
 (blink-cursor-mode +1)
 
 (setq scroll-conservatively most-positive-fixnum)
-
-
 
 (provide 'interface)
 

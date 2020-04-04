@@ -2,21 +2,22 @@
   :ensure t
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+  (setq org-plantuml-jar-path (expand-file-name "/Users/apple/.emacs.d/tools/plantuml.jar"))
  )
 
 (use-package plantuml-mode
-  :ensure t)
+  :ensure t
+  :config
+  (setq plantuml-default-exec-mode 'jar)
+  (setq plantuml-jar-path "/Users/apple/.emacs.d/tools/plantuml.jar"))
 (require 'org)
 
 (require 'org-tempo)
 
 (setq org-confirm-babel-evaluate nil)
 
-(setq org-plantuml-jar-path (expand-file-name "/Users/apple/.emacs.d/tools/plantuml.jar"))
-(setq plantuml-default-exec-mode 'jar)
-(setq plantuml-jar-path "/Users/apple/.emacs.d/tools/plantuml.jar")
 
-(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+
 
 (with-eval-after-load 'org
   (org-babel-do-load-languages
@@ -31,7 +32,6 @@
      (ledger . t)
      (ocaml . nil)
      (octave . t)
-     (plantuml . t)
      (python . t)
      (ruby . t)
      (screen . nil)
