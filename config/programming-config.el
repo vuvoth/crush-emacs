@@ -30,8 +30,7 @@
   ("M-s f" . prettier-js)
   ("M-]" . lsp-find-definition)
   ("M-<mouse-1>" . lsp-find-definition)
-  ("M-[" . xref-pop-marker-stack)
-  )
+  ("M-[" . xref-pop-marker-stack))
 
 (use-package lsp-java
   :ensure t
@@ -42,7 +41,6 @@
 (use-package company-lsp
   :ensure t
   :config
-
   (with-eval-after-load 'company
     (add-to-list 'company-backends 'company-lsp))
   :commands company-lsp)
@@ -62,4 +60,10 @@
   :config
   (which-key-mode))
 
+(use-package rust-mode
+  :ensure t)
+
 (provide 'programming-config)
+;;; programming-config.el ends here
+
+

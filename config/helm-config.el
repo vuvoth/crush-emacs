@@ -16,6 +16,8 @@
   ("C-x b" . helm-mini)
   ("C-s" . helm-ag-this-file))
 
+(use-package smex
+  :ensure t)
 (use-package helm-projectile
   :ensure t
     :bind ("C-c p h" . helm-projectile))
