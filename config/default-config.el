@@ -52,10 +52,10 @@
 ;;                     :weight 'normal
 ;;                     :width 'normal)
 
-(use-package telephone-line
-  :ensure t
-  :config
-  (telephone-line-mode 1))
+;; (use-package telephone-line
+;;   :ensure t
+;;   :config
+;;   (telephone-line-mode 1))
 
 
 (setq inhibit-startup-message t)
@@ -88,5 +88,6 @@ I give up everything or I will have nothing
 (blink-cursor-mode +1)
 
 (setq scroll-conservatively most-positive-fixnum)
+
 
 (provide 'default-config)

@@ -35,6 +35,6 @@
 (require 'window-and-buffer)
 (require 'tramp-config)
 (require 'emacs-meme)
-
+(require 'modeline)
 
 (provide 'init)
