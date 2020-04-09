@@ -60,5 +60,7 @@
      (sqlite . t)
      (plantuml . t))))
 
+(with-eval-after-load 'org (company-mode +1))
+
 (provide 'org-config)
 ;;; org-config.el ends here

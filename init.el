@@ -32,6 +32,7 @@
 (require 'utils)
 (require 'shell-config)
 (require 'markdown-config)
+(require 'window-and-buffer)
 (require 'tramp-config)
 (require 'emacs-meme)
 

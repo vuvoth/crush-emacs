@@ -28,7 +28,7 @@
 ;;   (load-theme 'gruvbox t))
 
 ;; (load-theme 'manoj-dark t)
-;; (set-face-attribute hl-line-face nil :foreground nil)
+ ;; (set-face-attribute hl-line-face nil :foreground nil :background "gray25")
 
 (use-package dracula-theme
   :ensure t
