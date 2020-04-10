@@ -34,6 +34,7 @@
   :ensure t
   :config
   (load-theme 'dracula t))
+
 ;; (use-package moe-theme
 ;;   :ensure t
 ;;   :config
@@ -46,13 +47,13 @@
 ;;   (load-theme 'twilight t))
 
 ;; Set default font
-;; (set-face-attribute 'default nil
-;;                     :family "Andale Mono"
-;;                     :height 120
-;;                     :weight 'normal
-;;                     :width 'normal)
+(set-face-attribute 'default nil
+                    :family "Andale Mono"
+                    :height 120
+                    :weight 'normal
+                    :width 'normal)
 
-;; (use-package telephone-line
+1;; (use-package telephone-line
 ;;   :ensure t
 ;;   :config
 ;;   (telephone-line-mode 1))
