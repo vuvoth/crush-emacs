@@ -15,6 +15,12 @@
 ;; Initializes the package infrastructure
 (package-initialize)
 
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(require 'use-package)
+
 (use-package exec-path-from-shell
   :ensure t
   :config
