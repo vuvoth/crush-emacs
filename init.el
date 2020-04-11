@@ -23,6 +23,7 @@
 (add-to-list 'load-path "~/.emacs.d/config")
 
 (require 'default-config)
+(require 'modeline)
 (require 'interface)
 (require 'navigative)
 (require 'helm-config)
@@ -34,7 +35,5 @@
 (require 'markdown-config)
 (require 'window-and-buffer)
 (require 'tramp-config)
-(require 'emacs-meme)
-(require 'modeline)
 
 (provide 'init)
