@@ -24,7 +24,7 @@
 (define-key plantuml-mode-map (kbd "<return>") 'newline)
 (require 'org)
 
-(require 'org-tempo)
+
 
 (setq org-confirm-babel-evaluate nil)
 

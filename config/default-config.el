@@ -28,18 +28,18 @@
 ;;   (load-theme 'gruvbox t))
 
 ;; (load-theme 'manoj-dark t)
- ;; (set-face-attribute hl-line-face nil :foreground nil :background "gray25")
+;;  (set-face-attribute hl-line-face nil :foreground nil :background "gray25")
 
-(use-package dracula-theme
-  :ensure t
-  :config
-  (load-theme 'dracula t))
-
-;; (use-package moe-theme
+;; (use-package dracula-theme
 ;;   :ensure t
 ;;   :config
-;;   (setq moe-theme-highlight-buffer-id nil)
-;;   (load-theme 'moe-light t))
+;;   (load-theme 'dracula t))
+
+(use-package moe-theme
+  :ensure t
+  :config
+  (setq moe-theme-highlight-buffer-id nil)
+  (load-theme 'moe-light t))
 
 ;; (use-package twilight-theme
 ;;   :ensure t

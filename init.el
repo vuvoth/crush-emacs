@@ -41,5 +41,7 @@
 (require 'markdown-config)
 (require 'window-and-buffer)
 (require 'tramp-config)
+(require 'hydra-config)
+
 
 (provide 'init)

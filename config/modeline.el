@@ -58,17 +58,17 @@
 
 (setq left-mode-line
       (list
-       "("
-       mode-name
-       ")"
-       " "
-       mode-line-buffer-identification
        " "
        mode-line-mule-info
        ":"
        mode-line-modified
-
        
+       " ("
+       mode-name
+       " - line %l"
+       ")"
+       " "
+       mode-line-buffer-identification
        ))
 
 
@@ -77,7 +77,7 @@
  '(:eval
    (simple-mode-line-render
     ;; left
-    (quote ("(Line %l) "  left-mode-line))
+    (quote ( "" left-mode-line  ))
     ;; right
     (quote (
       (:eval (when-let (vc vc-mode)
