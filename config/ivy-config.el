@@ -27,14 +27,32 @@
    ""))
 
 
-(set-face-attribute 'ivy-current-match nil :underline nil :foreground nil :background "gray15")
+;; (set-face-attribute 'ivy-current-match nil :underline nil :foreground nil :background "gray15")
 
 (setcdr (assq t ivy-format-functions-alist) #'vuvoth/ivy-format-function-arrow)
 
 (use-package smex
   :ensure t)
+
+
 (use-package counsel
-  :ensure t)
+  :ensure t
+  :config
+  (setq counsel-find-file-ignore-regexp
+        (concat
+         ;; File names beginning with # or .
+         "\\(?:\\`[#.]\\)"
+         ;; File names ending with # or ~
+         "\\|\\(?:\\`.+?[#~]\\'\\)")))
+
+(use-package counsel-projectile
+  :ensure t
+  :config
+  (counsel-projectile-mode +1))
+
+
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
 (global-set-key (kbd "M-s s") 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
@@ -53,5 +71,5 @@
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
 
-(provider 'ivy-config)
+(provide 'ivy-config)
 ;;; ivy-config.el ends here.

@@ -3,8 +3,6 @@
 
 (use-package ace-window
   :ensure t
-  :config
-  (ace-window-display-mode)
   :bind
   ("M-o" . ace-window))
 

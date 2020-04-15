@@ -18,7 +18,7 @@
 
 (toggle-scroll-bar -1)
 
-(fringe-mode '(8 . 0))
+(fringe-mode '(8 . 2))
 
 (setq-default indicate-empty-lines t)
 
@@ -39,7 +39,7 @@
   :ensure t
   :config
   (setq moe-theme-highlight-buffer-id nil)
-  (load-theme 'moe-light t))
+  (load-theme 'moe-dark t))
 
 ;; (use-package twilight-theme
 ;;   :ensure t
@@ -48,8 +48,8 @@
 
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Andale Mono"
-                    :height 120
+                    :family "Inconsolata"
+                    :height 140
                     :weight 'normal
                     :width 'normal)
 

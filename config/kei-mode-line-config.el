@@ -1,3 +1,5 @@
+;;; vuvoth - Vu Vo Thanh
+;;; mode-line config 
 (defvar kei/mode-line-git-edited-symbol " ++ "
   "show when git buffer modified")
 
@@ -10,42 +12,36 @@
 
 (defun initial-mode-line()
   (setq auto-revert-check-vc-info t))
+
 (initial-mode-line)
 
 (defun get-git-status-of-buffer()
-  (interactive)
   (let (
 	(buffer-status nil)
 	(current-buffle-file-name (buffer-file-name (current-buffer)))
 	
 	)
     (if (not (equal current-buffle-file-name nil))
-      (setq buffer-status (vc-state (buffer-file-name (current-buffer))))
+	(setq buffer-status (vc-state (buffer-file-name (current-buffer))))
       )
     buffer-status
-  ))
+    ))
 
-(get-git-status-of-buffer)
 (defun modeline-git-status ()
   (interactive)
-  (let ((
-			    
-	 file-status (get-git-status-of-buffer)
-	 ))
-    
+  (let (
+	(file-status (get-git-status-of-buffer))
+	)
     (if (string-equal file-status "edited")
 	(setq file-status 'kei/mode-line-git-edited-symbol)
       (if (string-equal file-status "up-to-date")
 	  (setq file-status 'kei/mode-line-git-up-to-date-symbol)
-	  (setq file-status 'kei/mode-line-git-nothing-symbol))
-      )
-    
-    (if  (vc-mode)
+	(setq file-status 'kei/mode-line-git-nothing-symbol)))
+    (if (vc-mode)
 	file-status
       (setq file-status "not git control"))
     file-status))
 
-(modeline-git-status)
 
 (defun simple-mode-line-render (left right)
   "Return a string of `window-width' length containing LEFT, and RIGHT aligned respectively."
@@ -56,40 +52,43 @@
 
 
 
-(setq left-mode-line
-      (list
-       " "
-       mode-line-mule-info
-       ":"
-       mode-line-modified
-       
-       " ("
-       mode-name
-       " - line %l"
-       ")"
-       " "
-       mode-line-buffer-identification
-       ))
+(use-package nyan-mode
+  :ensure t)
+(defun kei/load-mode-line()
+  (interactive)
+  (setq-default
+   mode-line-format
+   '(:eval
+     (simple-mode-line-render
+      ;; left
+      (quote (
+	      "(%p-%l) "
+	      mode-line-mule-info
+	      mode-line-modified
+	      " "
+	      mode-line-buffer-identification
+	      " | "
+	      (:eval (list (nyan-create))) ;; from the nyan-mode package
+	      " | "
+	      ))
+      ;; right
+      (quote (
+	      (:eval (when-let (vc vc-mode)
+		       (list 
+			(propertize (substring vc 5)
+				    ))))
+	      
+	      (:eval (modeline-git-status))
+	      
+	      ))
+      )))
+  (set-face-background 'mode-line "SlateGray1")
+  )
 
 
-(setq-default
- mode-line-format
- '(:eval
-   (simple-mode-line-render
-    ;; left
-    (quote ( "" left-mode-line  ))
-    ;; right
-    (quote (
-      (:eval (when-let (vc vc-mode)
-               (list 
-                (propertize (substring vc 5)
-                            ))))
-      
-      (:eval (modeline-git-status))
-      
-      ))
-    )))
+(kei/load-mode-line)
 
+(set-face-background 'fringe "grey25")
 
-(provide 'modeline)
+(provide 'kei-mode-line-config)
 ;;; modelines ends here.

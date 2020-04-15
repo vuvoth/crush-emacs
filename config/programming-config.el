@@ -46,14 +46,14 @@
   :commands company-lsp)
 
 
-(use-package yasnippet
-  :ensure t
-  :config
-  (yas-reload-all)
-  (add-hook 'prog-mode-hook #'yas-minor-mode))
+;; (use-package yasnippet
+;;   :ensure t
+;;   :config
+;;   (yas-reload-all)
+;;   (add-hook 'prog-mode-hook #'yas-minor-mode))
 
-(use-package yasnippet-snippets
-  :ensure t)
+;; (use-package yasnippet-snippets
+;;   :ensure t)
 ;; optional if you want which-key integration
 (use-package which-key
   :ensure t

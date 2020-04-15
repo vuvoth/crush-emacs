@@ -29,10 +29,11 @@
 (add-to-list 'load-path "~/.emacs.d/config")
 
 (require 'default-config)
-(require 'modeline)
+(require 'kei-mode-line-config)
 (require 'interface)
 (require 'navigative)
-(require 'helm-config)
+;; (require 'helm-config)
+(require 'ivy-config)
 (require 'programming-config)
 (require 'git-configure)
 (require 'org-config)
@@ -43,5 +44,7 @@
 (require 'tramp-config)
 (require 'hydra-config)
 
+
+(setq dired-listing-switches "-alh")
 
 (provide 'init)

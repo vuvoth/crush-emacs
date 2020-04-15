@@ -3,6 +3,16 @@
   :bind
   ("C-c C-w" . hydra-window/body))
 
+
+;; (defhydra hydra-move(:hint nil :color pink)
+;;   "
+
+;;  ^_SPC_^       next line
+;; "
+;;   ("SPC r")
+;;   ("SPC" next-line)
+;;   ("q" nil))
+
 (defhydra hydra-window(:hint nil :color pink)
   "
   Window and buffer manager                                                vuvoth
