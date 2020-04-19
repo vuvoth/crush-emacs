@@ -5,23 +5,9 @@
   (setq org-plantuml-jar-path (expand-file-name "/Users/apple/.emacs.d/tools/plantuml.jar"))
   )
 
-(use-package plantuml-mode
-  :ensure t
-  :config
-  (setq plantuml-default-exec-mode 'jar)
-  (setq plantuml-jar-path "/Users/apple/.emacs.d/tools/plantuml.jar")
-  (setq plantuml-output-type "svg"))
+ (require 'org-tempo)
+	
 
-(defun my-insert-tab-char ()
-  "Insert a tab char. (ASCII 9, \t)"
-  (interactive)
-  (insert "\t"))
-(defun my-insert-return-char ()
-  "Insert a tab char. (ASCII 9, \t)"
-  (interactive)
-  (newline))	
-(define-key plantuml-mode-map (kbd "<tab>") 'my-insert-tab-char)
-(define-key plantuml-mode-map (kbd "<return>") 'newline)
 (require 'org)
 
 

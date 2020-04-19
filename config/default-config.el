@@ -28,28 +28,34 @@
 ;;   (load-theme 'gruvbox t))
 
 ;; (load-theme 'manoj-dark t)
-;;  (set-face-attribute hl-line-face nil :foreground nil :background "gray25")
+ ;; (set-face-attribute hl-line-face nil :foreground nil :background "gray25")
 
 ;; (use-package dracula-theme
 ;;   :ensure t
 ;;   :config
 ;;   (load-theme 'dracula t))
 
-(use-package moe-theme
-  :ensure t
-  :config
-  (setq moe-theme-highlight-buffer-id nil)
-  (load-theme 'moe-dark t))
+;; (use-package moe-theme
+;;   :ensure t
+;;   :config
+;;   (setq moe-theme-highlight-buffer-id nil)
+;;   (load-theme 'moe-dark t))
 
 ;; (use-package twilight-theme
 ;;   :ensure t
 ;;   :config
 ;;   (load-theme 'twilight t))
 
+(use-package color-theme-sanityinc-tomorrow
+  :ensure t
+  :config
+  (load-theme 'sanityinc-tomorrow-eighties t))
+
+
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Inconsolata"
-                    :height 140
+                    :family "Andale Mono"
+                    :height 110
                     :weight 'normal
                     :width 'normal)
 

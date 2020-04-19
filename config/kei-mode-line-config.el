@@ -67,9 +67,9 @@
 	      mode-line-modified
 	      " "
 	      mode-line-buffer-identification
-	      " | "
-	      (:eval (list (nyan-create))) ;; from the nyan-mode package
-	      " | "
+	      ;; " | "
+	      ;; (:eval (list (nyan-create))) ;; from the nyan-mode package
+	      ;; " | "
 	      ))
       ;; right
       (quote (
@@ -82,7 +82,7 @@
 	      
 	      ))
       )))
-  (set-face-background 'mode-line "SlateGray1")
+  ;; (set-face-background 'mode-line "SlateGray1")
   )
 
 

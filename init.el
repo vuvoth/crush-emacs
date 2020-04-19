@@ -43,8 +43,9 @@
 (require 'window-and-buffer)
 (require 'tramp-config)
 (require 'hydra-config)
+(require 'plantuml-config)
 
+(require 'kei-mode)
 
-(setq dired-listing-switches "-alh")
 
 (provide 'init)

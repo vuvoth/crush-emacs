@@ -27,7 +27,7 @@
    ""))
 
 
-;; (set-face-attribute 'ivy-current-match nil :underline nil :foreground nil :background "gray15")
+(set-face-attribute 'ivy-current-match nil :underline nil :foreground nil :background "MediumPurple3")
 
 (setcdr (assq t ivy-format-functions-alist) #'vuvoth/ivy-format-function-arrow)
 
