@@ -21,9 +21,9 @@ Maybe she don't like me :'(.
 
                                                          Han Han  
 
+# Feature
 
-# Emacs screenshot
-
-![alt text](./screenshot/screenshot.png)
-
-
+	- Programming 
+	- Org mode 
+	- Magit
+   
