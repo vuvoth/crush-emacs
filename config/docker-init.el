@@ -10,4 +10,4 @@
 (use-package docker-tramp
   :ensure t)
 
-(provide 'docker-core)
+(provide 'docker-init)

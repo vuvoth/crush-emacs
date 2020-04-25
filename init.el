@@ -47,5 +47,7 @@
 
 (require 'kei-mode)
 
+(add-to-list 'load-path "~/.emacs.d/modules")
 
+(require 'gradle-company)
 (provide 'init)

@@ -32,21 +32,28 @@
   ("b" balance-windows)
   ("q" nil))
 
-(defhydra hydra-move(:color pink)
-  "hello"
-  ("j" next-line)
-  ("g" keyboard-quit)
-  ("v" set-mark-command)
-  ("k" previous-line)
-  ("l" forward-char)
-  ("h" backward-char)
-  ("w" forward-word)
-  ("b" backward-word)
-  ("c" kill-ring-save)
-  ("dd" kill-whole-line)
-  ("C" kill-region)
-  ("p" yank) 
-  ("q" nil))
+(defhydra hydra-move(:columns 6 :color amaranth)
+  "Motion"
+  ("x" counsel-M-x "M-x")
+  ("j" next-line "down")
+  ("g" keyboard-quit "cancel")
+  ("v" set-mark-command "mark")
+  ("k" previous-line "up")
+  ("l" forward-char "left")
+  ("h" backward-char "right")
+  ("w" forward-word "next work")
+  ("b" backward-word "back work")
+  ("c" kill-ring-save "copy")
+  ("dd" kill-whole-line "delete line")
+  ("C" kill-region "cut")
+  ("p" yank "paste") 
+  ("q" nil "quit"))
+
+(defhydra hydra-projectile (:colums 10 :color amaranth)
+  "Projectile control"
+  ("f" counsel-projectile-find-file "find file")
+  ("ag" counsel-projectile-ag "search use ag")
+  ("q" nil "quit"))
 
 (define-minor-mode kei-mode
   "Kei mode interactive"
@@ -54,8 +61,10 @@
   :keymap (let ((map (make-sparse-keymap)))
             (define-key map (kbd "M-m m") 'hydra-move/body)
 	    (define-key map (kbd "M-m w") 'hydra-window/body)
+	    (define-key map (kbd "M-m p") 'hydra-projectile/body)
             map)
+  :global t
   (which-key-mode -1))
 
-(kei-mode +1)
+(add-hook 'after-init-hook 'kei-mode)
 (provide 'kei-mode)

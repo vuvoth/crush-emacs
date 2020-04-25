@@ -1,5 +1,6 @@
 ;;; vuvoth - Vu Vo Thanh
-;;; mode-line config 
+;;; mode-line config
+
 (defvar kei/mode-line-git-edited-symbol " ++ "
   "show when git buffer modified")
 
@@ -62,7 +63,7 @@
      (simple-mode-line-render
       ;; left
       (quote (
-	      "(%p-%l) "
+	      ""
 	      mode-line-mule-info
 	      mode-line-modified
 	      " "
@@ -77,9 +78,9 @@
 		       (list 
 			(propertize (substring vc 5)
 				    ))))
-	      
+
 	      (:eval (modeline-git-status))
-	      
+	      "|%p - line %l " 
 	      ))
       )))
   ;; (set-face-background 'mode-line "SlateGray1")
@@ -88,7 +89,7 @@
 
 (kei/load-mode-line)
 
-(set-face-background 'fringe "grey25")
+;; (set-face-background 'fringe "grey25")
 
 (provide 'kei-mode-line-config)
 ;;; modelines ends here.

@@ -9,7 +9,7 @@
 (setq plantuml-color-font-lock-keywords
       (let* (
 	     (plantuml-keywords
-	      '("note" "hide" "activate" "deactivate"
+	      '("note" "hide" "activate" "deactivate" "actor" "else"
 		"end" "loop" "alt" "title" "skinparam" "left" "right" "participant" "break"))
 	     (plantuml-arrow '("->" "-->" "<-" "<--"))
 	     (plantuml-keywords-regexp (regexp-opt plantuml-keywords 'words))

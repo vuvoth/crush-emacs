@@ -20,7 +20,17 @@
 
 (fringe-mode '(8 . 2))
 
+(use-package neotree
+  :ensure t
+  :config
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
+
 (setq-default indicate-empty-lines t)
+
+(use-package plan9-theme
+  :ensure t
+  :config
+  (load-theme 'plan9 t))
 
 ;; (use-package gruvbox-theme
 ;;   :ensure t
@@ -46,20 +56,20 @@
 ;;   :config
 ;;   (load-theme 'twilight t))
 
-(use-package color-theme-sanityinc-tomorrow
-  :ensure t
-  :config
-  (load-theme 'sanityinc-tomorrow-eighties t))
+;; (use-package color-theme-sanityinc-tomorrow
+;;   :ensure t
+;;   :config
+;;   (load-theme 'sanityinc-tomorrow-eighties t))
 
 
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Andale Mono"
+                    :family "Fira Code"
                     :height 110
                     :weight 'normal
                     :width 'normal)
 
-1;; (use-package telephone-line
+;; (use-package telephone-line
 ;;   :ensure t
 ;;   :config
 ;;   (telephone-line-mode 1))
