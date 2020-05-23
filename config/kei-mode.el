@@ -32,7 +32,7 @@
   ("b" balance-windows)
   ("q" nil))
 
-(defhydra hydra-move(:columns 6 :color amaranth)
+(defhydra hydra-move(:columns 6 :color pink)
   "Motion"
   ("x" counsel-M-x "M-x")
   ("j" next-line "down")
@@ -63,8 +63,7 @@
 	    (define-key map (kbd "M-m w") 'hydra-window/body)
 	    (define-key map (kbd "M-m p") 'hydra-projectile/body)
             map)
-  :global t
-  (which-key-mode -1))
+  :global t)
 
 (add-hook 'after-init-hook 'kei-mode)
 (provide 'kei-mode)

@@ -16,21 +16,10 @@
    cands
    ""))
 
-(defun vuvoth/ivy-format-function-line (Cands)
-  "Transform CANDS into a string for minibuffer."
-  (ivy--format-function-generic
-   (lambda (str)
-     (ivy--add-face (concat  str "\n") 'ivy-current-match))
-   (lambda (str)
-     (concat str "\n"))
-   cands
-   ""))
-
-
-;; (set-face-attribute 'ivy-current-match nil :underline nil :foreground nil :background "MediumPurple3")
 
 (setcdr (assq t ivy-format-functions-alist) #'vuvoth/ivy-format-function-arrow)
 
+;; (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-default)
 (use-package smex
   :ensure t)
 
@@ -53,7 +42,7 @@
 
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-(global-set-key (kbd "M-s s") 'swiper)
+(global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)

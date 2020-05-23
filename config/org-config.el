@@ -44,7 +44,8 @@
      (shell . t)
      (sql . t)
      (sqlite . t)
-     (plantuml . t))))
+     (plantuml . t)
+     (js . t))))
 
 (with-eval-after-load 'org (company-mode +1))
 

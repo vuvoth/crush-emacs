@@ -10,27 +10,37 @@
 ;; Im a bad, bad girl
 ;; Its a bad man's world
 ;; =================================
+(require 'ivy)
 
 
+(use-package undo-tree
+  :ensure t
+  :config
+  (global-undo-tree-mode +1))
+(use-package beacon
+  :ensure t
+  :config
+  (beacon-mode 1))
 (global-hl-line-mode +1)
 
 (tool-bar-mode -1)
 
-(toggle-scroll-bar -1)
+(scroll-bar-mode -1)
 
-(fringe-mode '(8 . 2))
+(fringe-mode '(4 . 2))
 
 (use-package neotree
   :ensure t
   :config
+  (setq neo-window-fixed-size nil)
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
 
 (setq-default indicate-empty-lines t)
 
-(use-package plan9-theme
-  :ensure t
-  :config
-  (load-theme 'plan9 t))
+;; (use-package plan9-theme
+;;   :ensure t
+;;   :config
+;;   (load-theme 'plan9 t))
 
 ;; (use-package gruvbox-theme
 ;;   :ensure t
@@ -62,9 +72,17 @@
 ;;   (load-theme 'sanityinc-tomorrow-eighties t))
 
 
+;; (use-package color-theme-sanityinc-solarized
+;;   :ensure t
+;;   :config  
+;;   (load-theme 'solarized-light t))
+
+
+
+
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Fira Code"
+                    :family "Monoid"
                     :height 110
                     :weight 'normal
                     :width 'normal)

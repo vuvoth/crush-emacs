@@ -1,5 +1,3 @@
-
-
 (use-package anzu
   ;;; show number text match with search test
   :ensure t
