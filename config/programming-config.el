@@ -3,7 +3,6 @@
 
 
 (use-package company
-  :ensure t
   :hook ((prog-mode . company-mode)
 	 (emacs-lisp-mode . company-mode))
   :config
@@ -13,12 +12,12 @@
    company-idle-delay 0.1))
 
 (use-package lsp-mode
-  :ensure t
   :init (setq lsp-keymap-prefix "M-q")
   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
          (js-mode . lsp)
-	 (python-mode . lsp)
 	 (javascript-mode . lsp)
+	 (scala-mode . lsp)
+         (lsp-mode . lsp-lens-mode)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
@@ -28,40 +27,49 @@
 	lsp-enable-file-watchers nil)
   :bind
   ("M-s f" . prettier-js)
-  ("M-]" . lsp-find-definition)
+  ("M-." . lsp-find-definition)
   ("M-<mouse-1>" . lsp-find-definition)
-  ("M-[" . xref-pop-marker-stack))
+  ("M-," . xref-pop-marker-stack))
+
 
 (use-package lsp-java
-  :ensure t
   :config
   (require 'lsp-java)
-  (add-hook 'java-mode-hook #'lsp))
+  (add-hook 'java-mode-hook #'lsp)
+  (setq kei/lombok-jar (expand-file-name "~/.m2/repository/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar"))
+  (setq lsp-java-vmargs
+        `("-noverify"
+          "-Xmx2G"
+          "-XX:+UseG1GC"
+          "-XX:+UseStringDeduplication"
+          ,(concat "-javaagent:" kei/lombok-jar)
+          ,(concat "-Xbootclasspath/a:" kei/lombok-jar))
+	))
+  
 
 (use-package company-lsp
-  :ensure t
   :config
   (with-eval-after-load 'company
     (add-to-list 'company-backends 'company-lsp))
   :commands company-lsp)
 
+(use-package dap-mode :after lsp-mode :config (dap-auto-configure-mode))
+(use-package dap-java)
 
-;; (use-package yasnippet
-;;   :ensure t
-;;   :config
-;;   (yas-reload-all)
-;;   (add-hook 'prog-mode-hook #'yas-minor-mode))
 
-;; (use-package yasnippet-snippets
-;;   :ensure t)
+
+(use-package yasnippet
+  :config
+  (yas-reload-all)
+  (add-hook 'prog-mode-hook #'yas-minor-mode))
+
+(use-package yasnippet-snippets)
 ;; optional if you want which-key integration
 (use-package which-key
-  :ensure t
   :config
   (which-key-mode))
 
-(use-package rust-mode
-  :ensure t)
+(use-package rust-mode)
 
 (provide 'programming-config)
 

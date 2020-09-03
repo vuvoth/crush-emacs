@@ -2,13 +2,11 @@
 ;; author vuvth
 
 (use-package ace-window
-  :ensure t
   :bind
   ("M-o" . ace-window))
 
 
 (use-package goto-line-preview
-  :ensure t
   :config
   (global-set-key [remap goto-line] 'goto-line-preview))
 
@@ -28,14 +26,12 @@
 
 
 
-(use-package projectile
-  :ensure t)
+(use-package projectile)
 (projectile-mode +1)
 
 
 
-(use-package restart-emacs
-  :ensure t)
+(use-package restart-emacs)
 
 
 ;disable backup

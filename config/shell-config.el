@@ -125,5 +125,8 @@ more-helpful local prompt."
 (define-key shell-mode-map (kbd "<down>") 'kei/shell-history-down)
 (define-key shell-mode-map (kbd "RET") 'kei/shell-clear-screen)
 
+(defun op (path)
+  (interactive)
+  (find-file path))
 (provide 'shell-config)
 ;; 

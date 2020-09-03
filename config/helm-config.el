@@ -1,5 +1,4 @@
 (use-package helm
-  :ensure t
   :config
   (helm-mode +1)
   ;; (require 'helm-config)
@@ -16,14 +15,11 @@
   ("C-x b" . helm-mini)
   ("C-s" . helm-ag-this-file))
 
-(use-package smex
-  :ensure t)
+(use-package smex)
 (use-package helm-projectile
-  :ensure t
-    :bind ("C-c p h" . helm-projectile))
+  :bind ("C-c p h" . helm-projectile))
 
 (use-package helm-swoop
-  :ensure t
   :bind
   ("M-s s" . helm-swoop))
 

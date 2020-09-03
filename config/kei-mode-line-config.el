@@ -53,8 +53,7 @@
 
 
 
-(use-package nyan-mode
-  :ensure t)
+(use-package nyan-mode)
 (defun kei/load-mode-line()
   (interactive)
   (setq-default

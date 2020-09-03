@@ -10,15 +10,32 @@
 ;; Im a bad, bad girl
 ;; Its a bad man's world
 ;; =================================
-(require 'ivy)
 
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward)  ;; buffernames that are foo<1>, foo<2> are hard to read. This makes them foo|dir  foo|otherdir
+
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region (point-min) (point-max))
+
+  ;; mocha seems to output some non-standard control characters that
+  ;; aren't recognized by ansi-color-apply-on-region, so we'll
+  ;; manually convert these into the newlines they should be.
+  (goto-char (point-min))
+  (while (re-search-forward "\\[2K\\[0G" nil t)
+    (progn
+      (replace-match "
+")))
+  (toggle-read-only))
+
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
 (use-package undo-tree
-  :ensure t
   :config
   (global-undo-tree-mode +1))
 (use-package beacon
-  :ensure t
   :config
   (beacon-mode 1))
 (global-hl-line-mode +1)
@@ -27,70 +44,17 @@
 
 (scroll-bar-mode -1)
 
-(fringe-mode '(4 . 2))
+(fringe-mode '(8 . 2))
 
 (use-package neotree
-  :ensure t
   :config
   (setq neo-window-fixed-size nil)
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
 
 (setq-default indicate-empty-lines t)
 
-;; (use-package plan9-theme
-;;   :ensure t
-;;   :config
-;;   (load-theme 'plan9 t))
-
-;; (use-package gruvbox-theme
-;;   :ensure t
-;;   :config
-;;   (load-theme 'gruvbox t))
-
-;; (load-theme 'manoj-dark t)
- ;; (set-face-attribute hl-line-face nil :foreground nil :background "gray25")
-
-;; (use-package dracula-theme
-;;   :ensure t
-;;   :config
-;;   (load-theme 'dracula t))
-
-;; (use-package moe-theme
-;;   :ensure t
-;;   :config
-;;   (setq moe-theme-highlight-buffer-id nil)
-;;   (load-theme 'moe-dark t))
-
-;; (use-package twilight-theme
-;;   :ensure t
-;;   :config
-;;   (load-theme 'twilight t))
-
-;; (use-package color-theme-sanityinc-tomorrow
-;;   :ensure t
-;;   :config
-;;   (load-theme 'sanityinc-tomorrow-eighties t))
-
-
-;; (use-package color-theme-sanityinc-solarized
-;;   :ensure t
-;;   :config  
-;;   (load-theme 'solarized-light t))
-
-
-
-
-;; Set default font
-(set-face-attribute 'default nil
-                    :family "Monoid"
-                    :height 110
-                    :weight 'normal
-                    :width 'normal)
-
-;; (use-package telephone-line
-;;   :ensure t
-;;   :config
-;;   (telephone-line-mode 1))
+(use-package minions
+  :config (minions-mode 1))
 
 
 (setq inhibit-startup-message t)
@@ -123,6 +87,21 @@ I give up everything or I will have nothing
 (blink-cursor-mode +1)
 
 (setq scroll-conservatively most-positive-fixnum)
-
+(global-yascroll-bar-mode +1)
+ ;; (custom-set-faces
+ ;;     '(company-preview
+ ;;       ((t (:foreground "darkgray" :underline t))))
+ ;;     '(company-preview-common
+ ;;       ((t (:inherit company-preview))))
+ ;;     '(company-tooltip
+ ;;       ((t (:background "lightgray" :foreground "black"))))
+ ;;     '(company-tooltip-selection
+ ;;       ((t (:background "steelblue" :foreground "white"))))
+ ;;     '(company-tooltip-common
+ ;;       ((((type x)) (:inherit company-tooltip :weight bold))
+ ;;        (t (:inherit company-tooltip))))
+ ;;     '(company-tooltip-common-selection
+ ;;       ((((type x)) (:inherit company-tooltip-selection :weight bold))
+ ;;        (t (:inherit company-tooltip-selection)))))
 
 (provide 'default-config)

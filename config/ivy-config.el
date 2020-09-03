@@ -1,7 +1,6 @@
 ;; config ivy swiper and counsel for emacs
 
 (use-package ivy
-  :ensure t
   :config
   (ivy-mode 1))
 
@@ -20,12 +19,10 @@
 (setcdr (assq t ivy-format-functions-alist) #'vuvoth/ivy-format-function-arrow)
 
 ;; (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-default)
-(use-package smex
-  :ensure t)
+(use-package smex)
 
 
 (use-package counsel
-  :ensure t
   :config
   (setq counsel-find-file-ignore-regexp
         (concat
@@ -35,7 +32,6 @@
          "\\|\\(?:\\`.+?[#~]\\'\\)")))
 
 (use-package counsel-projectile
-  :ensure t
   :config
   (counsel-projectile-mode +1))
 

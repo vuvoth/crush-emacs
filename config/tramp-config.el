@@ -1,5 +1,4 @@
-(use-package helm-tramp
-  :ensure t)
+(use-package helm-tramp)
 
 (require 'tramp)
 (setq tramp-default-method "ssh")

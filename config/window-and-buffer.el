@@ -2,7 +2,6 @@
 (define-key global-map (kbd "M-<right>") 'next-buffer)
 
 (use-package zoom-window
-  :ensure t
   :bind
   ("C-c w" . zoom-window-zoom))
 (provide 'window-and-buffer)

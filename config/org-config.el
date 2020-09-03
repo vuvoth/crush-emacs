@@ -1,16 +1,15 @@
 (use-package org-bullets
-  :ensure t
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
   (setq org-plantuml-jar-path (expand-file-name "/Users/apple/.emacs.d/tools/plantuml.jar"))
   )
 
- (require 'org-tempo)
+(require 'org-tempo)
 	
 
 (require 'org)
 
-
+;; (use-package htmlize)
 
 (setq org-confirm-babel-evaluate nil)
 

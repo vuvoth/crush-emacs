@@ -1,5 +1,4 @@
 (use-package google-this
-  :ensure t
   :config
   (google-this-mode))
 
@@ -26,8 +25,7 @@
    ))
 
 
-(use-package command-log-mode
-  :ensure t)
+(use-package command-log-mode)
 
 (global-set-key (kbd "M-s r") 'restart-emacs)
 

@@ -1,8 +1,6 @@
-(use-package diff-hl
-  :ensure t)
+(use-package diff-hl)
 
 (use-package magit
-  :ensure t
   :config
   (setq magit-push-current-set-remote-if-missing nil)
   :bind

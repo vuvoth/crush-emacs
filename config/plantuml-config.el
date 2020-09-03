@@ -1,6 +1,5 @@
 ;;; 
 (use-package plantuml-mode
-  :ensure t
   :config
   (setq plantuml-default-exec-mode 'jar)
   (setq plantuml-jar-path "/Users/apple/.emacs.d/tools/plantuml.jar")
@@ -18,9 +17,6 @@
 	  (,plantuml-keywords-regexp . font-lock-keyword-face)
 	  (,plantuml-arrow-regexp . font-lock-function-name-face)
 	  )))
-
-
-
 
 
 

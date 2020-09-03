@@ -1,5 +1,4 @@
 (use-package hydra
-  :ensure t
   :bind
   ("C-c C-w" . hydra-window/body))
 
